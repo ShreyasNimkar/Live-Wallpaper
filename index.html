@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="banner">
+        <div class="container">
+            <div id="scene">
+                <div class="layerearth" data-depth="0.1">
+                    <div class="face">
+                        <div class="eyes">
+                            <div class="eye"><div class="ball"></div></div>
+                            <div class="eye"><div class="ball"></div></div>
+                        </div>
+                        <div class="mouth"><img src="smile.png"></div>
+                    </div>
+                </div>
+                <div class="layermid" data-depth-y="-0.3"><img src="mid.png"></div>
+                <div class="layerfore" data-depth-y="0.1"><img src="foreground.png"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- <script>
+        var scene=document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script> -->
+    <script>
+        for (i = 0; i < 20; i++) {
+            document.querySelector("body").innerHTML += `
+    <div class="stars1"
+    style="--x:${window.innerWidth*Math.random()};--y:${window.innerHeight*Math.random()}">
+    </div>
+    `
+        }
+        for (i = 0; i < 20; i++) {
+            document.querySelector("body").innerHTML += `
+<div class="stars2"
+style="--x:${window.innerWidth*Math.random()};--y:${window.innerHeight*Math.random()}">
+    </div>
+    `
+        }
+        for (i = 0; i < 20; i++) {
+            document.querySelector("body").innerHTML += `
+    <div class="stars3"
+    style="--x:${window.innerWidth*Math.random()};--y:${window.innerHeight*Math.random()}">
+    </div>
+    `
+        }
+        for (i = 0; i < 20; i++) {
+            document.querySelector("body").innerHTML += `
+    <div class="stars4"
+    style="--x:${window.innerWidth*Math.random()};--y:${window.innerHeight*Math.random()}">
+    </div>
+    `
+        }
+        for (i = 0; i < 20; i++) {
+            document.querySelector("body").innerHTML += `
+    <div class="stars5"
+    style="--x:${window.innerWidth*Math.random()};--y:${window.innerHeight*Math.random()}">
+    </div>
+    `
+        }
+        for (i = 0; i < 20; i++) {
+            document.querySelector("body").innerHTML += `
+    <div class="stars6"
+    style="--x:${window.innerWidth*Math.random()};--y:${window.innerHeight*Math.random()}">
+    </div>
+    `
+
+        }
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+        var balls=document.getElementsByClassName("ball");
+        document.onmousemove = function(){
+            var i=event.clientX * 100 / window.innerWidth + "%";
+            var j=event.clientY * 100 / window.innerHeight + "%";
+            for(var a=0;a<2;a++){
+                balls[a].style.left = i;
+                balls[a].style.top = j;
+                balls[a].style.bottom = "translate(-"+i+",-"+j+")";
+            }
+        }
+    </script>
+</body>
+
+</html>

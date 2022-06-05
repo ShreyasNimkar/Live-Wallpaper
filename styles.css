@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    background-color: #000000;
+    /* background-color: #071E3D; */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height:10000vh;
+    overflow-y: hidden;
+}
+
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height:100vh;
+}
+
+.container #scene .layerearth{
+    position:absolute;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+
+.face{
+    position:absolute;
+    width: 20vw;
+    height:20vw;
+    border-radius: 50%;
+    background: rgb(245, 204, 21);
+    z-index: -2;
+    top: 30vh;
+    left: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.eyes{
+    position: relative;
+    top: 5vh;
+    display: flex;
+
+}
+
+.eyes .eye{
+    position:relative;
+    width: 5vw;
+    height: 6vw;
+    display: block;
+    background: rgb(221, 218, 212);
+    margin:0 4vh;
+    border-radius: 50%;
+}
+
+.mouth img{
+    height:7vw;
+    width:7vw;
+}
+
+/* .banner .container .scene .layerearth .face .eyes .eye::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,50%);
+    width: 40px;
+    height:40px;
+    background: rgb(17, 165, 29);
+    border-radius: 50%; */
+
+.ball{
+    position:relative;
+    width: 3vw;
+    height: 3vw;
+    display: block;
+    background: rgb(61, 56, 48);
+    border-radius: 50%;
+    top: 25%;
+    left: 25%;
+}
+
+
+/* .container #scene .layerearth img{
+    position: absolute;
+    z-index: -3;
+    top: 30vh;
+    left: 40vw;
+    width: 20vw;
+    height:20vw;
+    object-fit: cover;
+} */
+
+
+.container #scene .layermid{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+
+}
+
+.container #scene .layermid img{
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 100vw;
+    height:80vh;
+    object-fit: cover;
+}
+
+.container #scene .layerfore{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+
+}
+
+.container #scene .layerfore img{
+    position: absolute;
+    top:0vh;
+    left: 50vw;
+    width: 50vw;
+    height:100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* stars */
+.stars1{
+    position:absolute;
+    width:5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #ffffff;
+    top:calc(1px* var(--y));
+    left:calc(1px* var(--x));
+    animation: move linear 100s infinite;
+    /* box-shadow: 0 0 3px 0.1px #21E6C1; */
+    position:absolute;
+    z-index: -9;
+}
+.stars2{
+    position:absolute;
+    /* box-shadow: 0 0 3px 0.5px #21E6C1; */
+    width:2px;
+    height: 2px;
+    border-radius: 100%;
+    background: #ffffff;
+    top:calc(1px* var(--y));
+    left:calc(1px* var(--x));
+    animation: move linear 100s infinite;
+    position:absolute;
+    z-index: -9;
+}
+
+.stars3{
+    position:absolute;
+    /* box-shadow: 0 0 3px 0.5px #21E6C1; */
+    width:4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #ffffff;
+    top:calc(1px* var(--y));
+    left:calc(1px* var(--x));
+    animation: move linear 100s infinite;
+    position:absolute;
+    z-index: -9;
+}
+
+.stars4{
+    position:absolute;
+    /* box-shadow: 0 0 3px 0.5px #ffffff; */
+    width:2px;
+    height: 2px;
+    border-radius: 100%;
+    background: #ffffff;
+    top:calc(1px* var(--y));
+    left:calc(1px* var(--x));
+    animation: move linear 100s infinite;
+    position:absolute;
+    z-index: -9;
+}
+.stars5{
+    position:absolute;
+    /* box-shadow: 0 0 3px 0.5px #ffffff; */
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #ffffff;
+    top:calc(1px* var(--y));
+    left:calc(1px* var(--x));
+    animation: move linear 100s infinite;
+    position:absolute;
+    z-index: -9;
+}
+.stars6{
+    position:absolute;
+    /* box-shadow: 0 0 3px 0.5px #ffffff; */
+    width:4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #ffffff;
+    top:calc(1px* var(--y));
+    left:calc(1px* var(--x));
+    animation: move linear 100s infinite;
+    position:absolute;
+    z-index: -9;
+}
+
+@keyframes move{
+    from{
+        top:calc(1px* var(--y));
+        left:calc(1px* var(--x));
+    }
+    to{
+        top:calc(2px* var(--y));
+        left:calc(2px* var(--x));
+    }
+}
